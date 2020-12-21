@@ -1,23 +1,13 @@
-import { Container } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core';
-import LandingScreen from '../src/screens/LandingScreen';
-import Header from '../src/components/Header';
-import Footer from '../src/components/Footer';
+import Head from 'next/head';
+import LandingScreen from '../src/screens/LandingScreen/index';
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    height: '100vh'
-  }
-}));
-
-export default function Home() {
-  const classes = useStyles();
-
+export default function LandingPage() {
   return (
     <>
-      {/* <Header /> */}
+      <Head>
+        <title>HACKNITR 2.0</title>
+      </Head>
       <LandingScreen />
-      {/* <Footer /> */}
     </>
   );
 }
